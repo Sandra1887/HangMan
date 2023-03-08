@@ -3,7 +3,6 @@ import java.util.Scanner;
 
 public class Wordlist {
     ArrayList<String> wordList;
-    //String currentWord;
 
     public Wordlist() {
         wordList = new ArrayList<>();

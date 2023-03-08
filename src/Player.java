@@ -22,10 +22,6 @@ public class Player {
         return score;
     }
 
-    /*public int getGuesses() {
-        return guesses;
-    }*/
-
     public int increaseScore() {
         return score++;
     }
@@ -38,9 +34,4 @@ public class Player {
     public String toString() {
         return name + " have scored " + score + "points in " + guesses + "guesses";
     }
-
-    /*public void resetScore() {
-        int score = getScore();
-        score = 0;
-    }*/
 }

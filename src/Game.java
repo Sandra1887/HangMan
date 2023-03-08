@@ -11,13 +11,13 @@ public class Game {
     }
 
     boolean play = true;
-    boolean continuePlaying = false;
+    boolean continuePlaying = true;
 
     public void run() {
             String name = askForName();
             player = new Player(name);
             welcomePlayer(name);
-        while (!continuePlaying) {
+        while (continuePlaying) {
             Menu.showMainMenu();
             int choice = Menu.askForNumber(1, 5);
             switch (choice) {
@@ -55,27 +55,6 @@ public class Game {
             continuePlaying = true;
         }
     }
-
-    /*public void play() {
-        word = new CurrentWord(wordList.randomWord());
-        Scanner sc = new Scanner(System.in);
-        System.out.println("The current word is: " + word + ". Make a guess?");
-        String letter = sc.nextLine();
-        if (letter.length() > 1) {
-            if (word.equals(letter)) {
-                maxGuesses--;
-                currentGuesses++;
-                winner = true;
-                System.out.println("You won! You did it in " + currentGuesses + " guesses");
-                System.out.println("Play again? y/n?");
-                if(sc.nextLine() == "y") {
-                    play();
-                } else {
-                    exit = true;
-                }
-            }
-        }
-    }*/
 
     public String askForName () {
         Scanner sc = new Scanner(System.in);
