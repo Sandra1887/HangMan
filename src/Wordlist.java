@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class Wordlist {
     ArrayList<String> wordList;
-    String currentWord;
+    //String currentWord;
 
     public Wordlist() {
         wordList = new ArrayList<>();
@@ -20,9 +20,9 @@ public class Wordlist {
         return word;
     }
 
-    public String getCurrentWord() {
+    /*public String getCurrentWord() {
         return currentWord;
-    }
+    }*/
 
     public void addWord() {
         Scanner sc = new Scanner(System.in);

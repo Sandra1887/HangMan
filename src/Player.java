@@ -22,9 +22,9 @@ public class Player {
         return score;
     }
 
-    public int getGuesses() {
+    /*public int getGuesses() {
         return guesses;
-    }
+    }*/
 
     public int increaseScore() {
         return score++;
