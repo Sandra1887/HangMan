@@ -34,20 +34,20 @@ public class Game {
                 word = new CurrentWord(wordList.randomWord());
                 System.out.println("The word has " + word.getWord().length() + " letters. ");
                 while (word.won() == false) {//efter
-                    System.out.println("Guessed letters: "); //efter
+                    System.out.println("Guessed letters: ");
                     printGuessedLetters(guessedLetters);
                     makeAGuess();
                     char guess = sc.next().charAt(0);
                     word.replaceLetter(guess);
-                    guessedLetters.add(guess); //efter
-                    player.increaseGuesses(); //efter
+                    guessedLetters.add(guess);
+                    player.increaseGuesses();
                     System.out.println(word.getGuess());
                     if (word.won() == true) {
                         player.increaseScore();
                         congrats(word.getWord());
-                        System.out.println("\nYou, " + player.getName() + " made it in " + player.guesses + " guesses. \n" +
-                                "Your current score is " + player.getScore()); //efter
-                        thankYou();
+                        System.out.println("\nGo " + player.getName() + "!! You made it in " + player.guesses + " guesses. \n" +
+                                "Your current score is " + player.getScore());
+                        player.resetGuesses();
                         play = false;
                     }
                 }
@@ -66,7 +66,7 @@ public class Game {
         System.out.println("Welcome " + name);
     }
 
-    public static void printGuessedLetters(ArrayList<Character> arraylist) { //efter
+    public static void printGuessedLetters(ArrayList<Character> arraylist) {
         for (Character c : arraylist) {
             System.out.print(c + ", ");
         }
@@ -81,12 +81,8 @@ public class Game {
         System.out.println("Congratz! Your guess was right! The word is " + word + ".");
     }
 
-    public void thankYou() {
-        System.out.println("Thank you for playing.");
-        System.out.println();
-    }
-
     private void endGame() {
+        System.out.println("Thank you for playing!");
         System.exit(0);
     }
 }

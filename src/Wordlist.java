@@ -18,11 +18,6 @@ public class Wordlist {
         String word = wordList.get(index);
         return word;
     }
-
-    /*public String getCurrentWord() {
-        return currentWord;
-    }*/
-
     public void addWord() {
         Scanner sc = new Scanner(System.in);
         System.out.println("Word to add?");

@@ -26,6 +26,10 @@ public class Player {
         return score++;
     }
 
+    public void resetGuesses() {
+        guesses = 0;
+    }
+
     public int increaseGuesses() {
         return guesses++;
     }
